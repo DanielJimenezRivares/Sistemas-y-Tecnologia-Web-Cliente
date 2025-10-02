@@ -1,0 +1,156 @@
+main {
+  display: grid;
+  grid-template-areas: "menu content" "testimonies testimonies";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.testimonies-section {
+  grid-area: testimonies;
+  background-color: #D9D2E9;
+  color: black;
+  padding: 12.5px;
+  text-align: center;
+}
+
+.testimonies-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.testimonies-list > * {
+  flex: 1;
+}
+
+.testimony, .product {
+  display: block;
+  background-color: #C27BA0;
+  color: black;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid black;
+  display: block;
+  padding: 25px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: 2px solid black;
+  padding: 25px;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  background-color: #CFE2F3;
+  padding: 35px;
+  color: black;
+  gap: 35px;
+}
+
+.content > * {
+  flex: 1;
+}
+
+.description-block {
+  display: block;
+  background-color: #C27BA0;
+  color: black;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.products-block {
+  display: block;
+  background-color: #C27BA0;
+  color: black;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid black;
+  display: block;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 25px;
+}
+
+.product {
+  background-color: rgb(234.2979274611, 210.2020725389, 222.7590673575);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+}
+body h2 {
+  font-size: 1.75em;
+  color: black;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(188.0746268657, 175.7462686567, 216.2537313433);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+header h1 {
+  margin: 0;
+}
+header img.logo {
+  position: absolute;
+  left: 20px;
+  height: 60px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CFE2F3;
+  color: black;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+footer {
+  background-color: #CFE2F3;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}/*# sourceMappingURL=style.css.map */
