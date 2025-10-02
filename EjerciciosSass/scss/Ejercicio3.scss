@@ -1,0 +1,17 @@
+@mixin flex-dir($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+.container {
+  @include flex-dir(column);
+}
+
+.box {
+  @include size(120px, 80px);
+}

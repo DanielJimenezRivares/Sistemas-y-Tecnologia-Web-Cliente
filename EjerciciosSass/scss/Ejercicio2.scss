@@ -1,0 +1,22 @@
+@import "alert";
+
+.alert--info {
+  @extend %alert;
+  background-color: #e7f3ff;
+  border-color: #b3daff;
+  color: #084298;
+}
+
+.alert--success {
+  @extend %alert;
+  background-color: #eaf7ea;
+  border-color: #c6efc6;
+  color: #0f5132;
+}
+
+.alert--error {
+  @extend %alert;
+  background-color: #fde2e1;
+  border-color: #f7b7b5;
+  color: #842029;
+}
