@@ -1,0 +1,16 @@
+{
+  "name": "ejercicio-2",
+  "version": "1.0.0",
+  "description": "Ejercicio 2 - Parcel setup",
+  "scripts": {
+    "dev": "parcel serve --dist-dir dist ./index.html",
+    "build": "parcel build --dist-dir build --public-url --public-url \"/Sistemas-y-Tecnologia-Web-Cliente/Herramientas/Ejercicio 2\" ./index.html",
+    "deploy": "gh-pages -d build --dest \"Herramientas/Ejercicio 2\""
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.16.0",
+    "@parcel/transformer-sass": "^2.16.0",
+    "sass": "^1.90.0"
+  }
+}

@@ -1,0 +1,23 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin h2-style {
+    font-size: 1.75em;
+    color: black;
+    font-weight: 500;
+    font-family: $font-stack;
+    padding: 10px;
+    margin: 0;
+}
+
+@mixin block-style {
+    display: block;
+    background-color: $tertiary-color;
+    color: black;
+    border-radius: 20px;
+    padding: $padding;
+    border: 1px solid black;
+}
