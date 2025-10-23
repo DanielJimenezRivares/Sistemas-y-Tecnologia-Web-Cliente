@@ -772,12 +772,23 @@ customElements.define('app-layout', AppLayout);
     constructor(){
         super();
         this._data = null;
+        this._reviewsOpen = false;
         this.attachShadow({
             mode: 'open'
         });
         this.shadowRoot.appendChild(cloneTpl('tpl-espacio-card'));
     }
     connectedCallback() {
+        this._btnReviews = this.shadowRoot.querySelector('#btn-reviews');
+        if (this._btnReviews) this._btnReviews.addEventListener('click', (ev)=>{
+            this._reviewsOpen = !this._reviewsOpen;
+            this._syncReviewsButton();
+            this.reviews = this.shadowRoot.querySelector('search-valoraciones');
+            this.reviews._toggleReviews({
+                id: String(this._data?.id),
+                open: this._reviewsOpen
+            });
+        });
         if (this._data) this._render();
     }
     set data(obj) {
@@ -821,6 +832,12 @@ customElements.define('app-layout', AppLayout);
             webEl.appendChild(a);
         } else webEl.textContent = 'Web: -';
     }
+    _syncReviewsButton() {
+        // Gestiona aria + rotación flecha vía atributo en el host
+        if (this._btnReviews) this._btnReviews.setAttribute('aria-expanded', this._reviewsOpen ? 'true' : 'false');
+        if (this._reviewsOpen) this.setAttribute('reviews-open', '');
+        else this.removeAttribute('reviews-open');
+    }
 }
 customElements.define('espacio-card', EspacioCard);
 /* ------------------ search-form ------------------ */ class SearchForm extends HTMLElement {
@@ -833,8 +850,8 @@ customElements.define('espacio-card', EspacioCard);
     }
     connectedCallback() {
         const form = this.shadowRoot.querySelector('form');
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault();
+        form.addEventListener('submit', (e1)=>{
+            e1.preventDefault();
             const fd = new FormData(form);
             const q = (fd.get('q') || '').toString().trim();
             const tipo = (fd.get('tipo') || '').toString();
@@ -842,7 +859,7 @@ customElements.define('espacio-card', EspacioCard);
                 q,
                 tipo
             };
-            this.dispatchEvent(new CustomEvent('search', {
+            this.dispatchEvent(new CustomEvent('search-espacios-event', {
                 detail,
                 bubbles: true,
                 composed: true
@@ -862,7 +879,7 @@ customElements.define('search-form', SearchForm);
         this._all = [];
     }
     connectedCallback() {
-        this.shadowRoot.addEventListener('search', (e)=>this._onSearch(e.detail));
+        this.shadowRoot.addEventListener('search-espacios-event', (e1)=>this._onSearch(e1.detail));
         this._list = this.shadowRoot.querySelector('espacios-list');
         this._info = this.shadowRoot.getElementById('info');
     }
@@ -924,6 +941,218 @@ customElements.define('search-espacios', SearchEspacios);
     }
 }
 customElements.define('espacios-list', EspaciosList);
+/* ------------------ search-espacios (orquestador) ------------------ */ class SearchValoraciones extends HTMLElement {
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(cloneTpl('tpl-search-valoraciones'));
+        this.apiBase = window.API_BASE || '';
+        this._all = [];
+    }
+    connectedCallback() {
+        this._list = this.shadowRoot.querySelector('valoraciones-list');
+        this._write = this.shadowRoot.querySelector('valoraciones-write');
+        this.shadowRoot.addEventListener('review-uploaded', ()=>{
+            if (this._id) this._toggleReviews({
+                e
+            });
+        });
+        this.shadowRoot.addEventListener('review-uploaded', (ev)=>{
+            const id = ev.detail?.id ?? null;
+            if (id) this._toggleReviews({
+                id: id,
+                open: true
+            });
+        });
+    }
+    async _toggleReviews({ id, open }) {
+        this._write._id = id;
+        if (open) try {
+            if (!id) {
+                alert('No se ha seleccionado espacio.');
+                return;
+            }
+            const qs = new URLSearchParams();
+            qs.set('start', 0);
+            qs.set('end', 4);
+            const url = `${this.apiBase}/valoraciones/reviews/${id}?${qs.toString() ? `?${qs.toString()}` : ''}`;
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('network');
+            const body = await res.json();
+            this._all = Array.isArray(body.data) ? body.data : [];
+            this._render();
+            this.setAttribute('open', '');
+        } catch (err) {
+            console.error(err);
+            this._info.textContent = 'Error al obtener datos.';
+            this._list.setItems([]);
+        }
+        else {
+            this._all = null;
+            this._render();
+            this.removeAttribute('open');
+        }
+    }
+    _render() {
+        this._list.setItems(this._all);
+    }
+}
+customElements.define('search-valoraciones', SearchValoraciones);
+/* ------------------ espacios-list ------------------ */ class ValoracionesList extends HTMLElement {
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(cloneTpl('tpl-valoraciones-list'));
+        this.items = [];
+    }
+    setItems(items) {
+        this.items = items || [];
+        this._render();
+    }
+    appendItems(items) {
+        this.items = [
+            ...this.items,
+            ...items || []
+        ];
+        this._render();
+    }
+    _render() {
+        const ul = this.shadowRoot.getElementById('list');
+        ul.innerHTML = '';
+        (this.items || []).forEach((it)=>{
+            const li = document.createElement('li');
+            const card = document.createElement('valoraciones-card');
+            card.data = it;
+            li.appendChild(card);
+            ul.appendChild(li);
+        });
+    }
+}
+customElements.define('valoraciones-list', ValoracionesList);
+/* ------------------ valoraciones-card ------------------ */ class ValoracionesCard extends HTMLElement {
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(cloneTpl('tpl-valoraciones-card'));
+        this._data = null;
+    }
+    set data(d) {
+        this._data = d || {};
+        this._render();
+    }
+    get data() {
+        return this._data;
+    }
+    _fmtDate(iso) {
+        if (!iso) return '';
+        const d = new Date(iso);
+        if (isNaN(+d)) return '';
+        return d.toLocaleString(undefined, {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    }
+    _stars(n) {
+        const v = Math.max(0, Math.min(5, Number(n) || 0));
+        return "\u2605".repeat(v) + "\u2606".repeat(5 - v);
+    }
+    _render() {
+        const d = this._data || {};
+        // admite claves variadas del backend
+        const user = d.username ?? d.user ?? "An\xf3nimo";
+        const rating = d.rating ?? 0;
+        const text = d.review ?? d.text ?? '';
+        const when = d.timestamp ?? d.createdAt ?? d.date ?? d.fecha ?? '';
+        this.shadowRoot.querySelector('.user').textContent = user;
+        this.shadowRoot.querySelector('.stars').textContent = this._stars(rating);
+        this.shadowRoot.querySelector('.date').textContent = this._fmtDate(when);
+        const textEl = this.shadowRoot.querySelector('.text');
+        if (text && text !== '-') {
+            textEl.textContent = text;
+            textEl.hidden = false;
+        } else {
+            textEl.textContent = '';
+            textEl.hidden = true;
+        }
+        // A11y: describe con aria-label la puntuación
+        this.shadowRoot.querySelector('.stars').setAttribute('aria-label', `Puntuaci\xf3n: ${Number(rating) || 0} de 5`);
+    }
+}
+customElements.define('valoraciones-card', ValoracionesCard);
+/* ------------------ valoraciones-write ------------------ */ class ValoracionesWrite extends HTMLElement {
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(cloneTpl('tpl-valoraciones-write'));
+        this.apiBase = window.API_BASE || '';
+    }
+    set id(id) {
+        this._id = id ? String(id) : null;
+    }
+    get id() {
+        return this._id;
+    }
+    connectedCallback() {
+        const form = this.shadowRoot.getElementById('form');
+        form.addEventListener('submit', (e1)=>this.#onSubmit(e1));
+    }
+    async #onSubmit(e1) {
+        e1.preventDefault();
+        if (!this._id) {
+            alert('No se ha seleccionado espacio.');
+            return;
+        }
+        const form = e1.currentTarget;
+        const fd = new FormData(form);
+        const rating = Number(fd.get('rating') || 0);
+        if (!rating) {
+            alert('El rating es obligatorio.');
+            return;
+        }
+        const payload = {
+            espacio_cultural_id: this._id,
+            rating,
+            username: (fd.get('username') || '').toString().trim() || undefined,
+            review: (fd.get('review') || '').toString().trim() || undefined
+        };
+        try {
+            // Adjust if your endpoint differs:
+            const url = `${this.apiBase}/valoraciones`;
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+            console.log(res);
+            if (!res.ok) throw new Error('network');
+            form.reset();
+            this.dispatchEvent(new CustomEvent('review-uploaded', {
+                detail: {
+                    id: this._id
+                },
+                bubbles: true,
+                composed: true
+            }));
+        } catch (err) {
+            console.error(err);
+            alert("No se pudo enviar la rese\xf1a. Int\xe9ntalo de nuevo.");
+        }
+    }
+}
+customElements.define('valoraciones-write', ValoracionesWrite);
 
 },{}]},["eR7Ob","gREN8"], "gREN8", "parcelRequire05b6", {})
 let {"*": _, } = parcelRequire05b6("gREN8");

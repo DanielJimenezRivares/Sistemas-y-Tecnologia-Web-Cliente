@@ -75,7 +75,7 @@ router.post("/", (req, res) => {
 
     const ts = timestamp ? new Date(timestamp).toISOString() : new Date().toISOString();
     const text = typeof review === "string" ? review.trim() : undefined;
-    const user = typeof username === "string" ? username.trim() : "Anonymous";
+    const user = typeof username === "string" ? username.trim() : "Anónimo";
 
     // --- Load / update DB ---
     const db = readDB();
