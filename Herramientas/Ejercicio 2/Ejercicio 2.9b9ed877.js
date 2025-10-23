@@ -1,0 +1,2 @@
+async function generateRandomText(e){try{let t=await fetch(`https://random-word-api.herokuapp.com/word?number=${e}`);return(await t.json()).join(" ")}catch(e){return console.error("Error fetching random words:",e),"Error generating random text"}}window.addEventListener("DOMContentLoaded",async()=>{let e=await generateRandomText(100);document.getElementById("empresaDesc").textContent=e});
+//# sourceMappingURL=Ejercicio 2.9b9ed877.js.map

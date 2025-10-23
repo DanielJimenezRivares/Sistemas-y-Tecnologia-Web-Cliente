@@ -1,0 +1,43 @@
+@use "sass:color";
+
+body {
+    font-family: $font-stack;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100vh;
+    margin: 0;
+    h2 {
+        @include h2-style;
+    }
+}
+
+header {
+    background-color: color.adjust($primary-color, $lightness: -10%);
+    color: black;
+    @include flex-center;
+    padding: $padding;
+    h1 {
+        margin: 0;
+    }
+    img.logo {
+        position: absolute;
+        left: 20px;
+        height: 60px;
+        width: auto;
+    }
+}
+
+nav {
+    @include flex-center;
+    background-color: $secondary-color;
+    color: black;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+footer {
+    background-color: $secondary-color;
+    color: black;
+    @include flex-center;
+    padding: $padding;
+}

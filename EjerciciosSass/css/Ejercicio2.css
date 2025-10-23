@@ -1,0 +1,24 @@
+.alert--error, .alert--success, .alert--info {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.alert--info {
+  background-color: #e7f3ff;
+  border-color: #b3daff;
+  color: #084298;
+}
+
+.alert--success {
+  background-color: #eaf7ea;
+  border-color: #c6efc6;
+  color: #0f5132;
+}
+
+.alert--error {
+  background-color: #fde2e1;
+  border-color: #f7b7b5;
+  color: #842029;
+}/*# sourceMappingURL=Ejercicio2.css.map */
