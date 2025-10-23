@@ -132,6 +132,7 @@
 <template id="tpl-espacio-card">
   <style>
     :host{ display:block; padding:4px }
+    :host([hidden]) { display:none; }
     .card{ border:1px solid #ddd; padding:16px; border-radius:8px; background:white; }
     .row{ display:flex; justify-content:space-between; align-items:center; margin:0px; padding:0px }
     .title{ font-weight:700; margin:3px }
@@ -173,6 +174,7 @@
 <template id="tpl-search-valoraciones">
   <style>
     :host{ display:block; width:100%; height:100%;}
+    :host([hidden]) { display:none; }
     #results{
       margin: 0px;
       width:100%;
@@ -187,8 +189,8 @@
       margin-top:6px;
       text-align:center
     }
-    :host(:not([open])) valoraciones-list { display:none; }
-    :host(:not([open])) valoraciones-write { display:none; }
+    /* :host(:not([open])) valoraciones-list { display:none; }
+    :host(:not([open])) valoraciones-write { display:none; } */
   </style>
   <div id="results">
     <valoraciones-list></valoraciones-list>
@@ -207,6 +209,7 @@
       flex: 1;
       min-height: 0;
     }
+    :host([hidden]) { display:none; }
     ul {
       list-style: none;
       padding: 0;
@@ -239,7 +242,7 @@
       box-sizing: border-box;
       margin: 8px 0;
     }
-
+    :host([hidden]) { display:none; }
     .card {
       width: 100%;                     /* smaller than container to appear centered */
       background: #fff;
@@ -299,9 +302,7 @@
       display:block;
       padding:10px 0;
       border-top:1px solid #eee;
-      font-family:Arial,Helvetica,sans-serif;
     }
-
     form {
       display:flex;
       flex-direction:column;

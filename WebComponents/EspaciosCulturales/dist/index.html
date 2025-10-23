@@ -199,6 +199,10 @@ li {
   display: block;
 }
 
+:host([hidden]) {
+  display: none;
+}
+
 .card {
   background: #fff;
   border: 1px solid #ddd;
@@ -297,6 +301,10 @@ a.link {
   display: block;
 }
 
+:host([hidden]) {
+  display: none;
+}
+
 #results {
   flex-direction: column;
   flex: 1;
@@ -312,10 +320,6 @@ a.link {
   margin-top: 6px;
   font-size: .9em;
 }
-
-:host(:not([open])) valoraciones-list, :host(:not([open])) valoraciones-write {
-  display: none;
-}
 </style>
   <div id="results">
     <valoraciones-list></valoraciones-list>
@@ -329,6 +333,10 @@ a.link {
   width: 100%;
   min-height: 0;
   display: flex;
+}
+
+:host([hidden]) {
+  display: none;
 }
 
 ul {
@@ -359,6 +367,10 @@ li {
   width: 100%;
   margin: 8px 0;
   display: flex;
+}
+
+:host([hidden]) {
+  display: none;
 }
 
 .card {
@@ -419,7 +431,6 @@ li {
 :host {
   border-top: 1px solid #eee;
   padding: 10px 0;
-  font-family: Arial, Helvetica, sans-serif;
   display: block;
 }
 

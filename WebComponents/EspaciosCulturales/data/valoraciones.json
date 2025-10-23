@@ -1,4 +1,50 @@
 {
+  "1": {
+    "sum": 15,
+    "count": 4,
+    "reviews": [
+      {
+        "rating": 4,
+        "review": "Fantástico",
+        "username": "Usuario 1",
+        "timestamp": "2025-10-23T15:57:50.952Z"
+      },
+      {
+        "rating": 1,
+        "review": "Fatal, un desastre de proporciones épicas.",
+        "username": "Usuario 2",
+        "timestamp": "2025-10-23T15:58:09.826Z"
+      },
+      {
+        "rating": 5,
+        "review": "dffds",
+        "username": "Usuario 1",
+        "timestamp": "2025-10-23T16:21:43.853Z"
+      },
+      {
+        "rating": 5,
+        "username": "Anónimo",
+        "timestamp": "2025-10-23T16:21:54.751Z"
+      }
+    ]
+  },
+  "2": {
+    "sum": 9,
+    "count": 2,
+    "reviews": [
+      {
+        "rating": 5,
+        "username": "Anónimo",
+        "timestamp": "2025-10-23T16:01:08.585Z"
+      },
+      {
+        "rating": 4,
+        "review": "Perfecto",
+        "username": "Anónimo",
+        "timestamp": "2025-10-23T16:01:21.763Z"
+      }
+    ]
+  },
   "9": {
     "sum": 23,
     "count": 7,

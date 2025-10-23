@@ -768,6 +768,107 @@ customElements.define('app-footer', AppFooter);
     }
 }
 customElements.define('app-layout', AppLayout);
+/* ------------------ search-espacios (orquestador) ------------------ */ class SearchEspacios extends HTMLElement {
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(cloneTpl('tpl-search-espacios'));
+        this.apiBase = window.API_BASE || '';
+        this._all = [];
+    }
+    connectedCallback() {
+        this.shadowRoot.addEventListener('search-espacios-event', (e)=>this._onSearch(e.detail));
+        this._list = this.shadowRoot.querySelector('espacios-list');
+        this._info = this.shadowRoot.getElementById('info');
+    }
+    async _onSearch({ q, tipo }) {
+        try {
+            const qs = new URLSearchParams();
+            if (tipo) qs.set('tipo', tipo);
+            if (q) qs.set('q', q);
+            qs.set('start', 0);
+            qs.set('end', 4);
+            const url = `${this.apiBase}/espacios${qs.toString() ? `?${qs.toString()}` : ''}`;
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('network');
+            const body = await res.json();
+            this._all = Array.isArray(body.data) ? body.data : [];
+            this._render();
+        } catch (err) {
+            console.error(err);
+            this._info.textContent = 'Error al obtener datos.';
+            this._list.setItems([]);
+        }
+    }
+    _render() {
+        this._list.setItems(this._all);
+        this._info.textContent = `Mostrando ${this._all.length} resultados`;
+    }
+}
+customElements.define('search-espacios', SearchEspacios);
+/* ------------------ search-form ------------------ */ class SearchForm extends HTMLElement {
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(cloneTpl('tpl-search-form'));
+    }
+    connectedCallback() {
+        const form = this.shadowRoot.querySelector('form');
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            const fd = new FormData(form);
+            const q = (fd.get('q') || '').toString().trim();
+            const tipo = (fd.get('tipo') || '').toString();
+            const detail = {
+                q,
+                tipo
+            };
+            this.dispatchEvent(new CustomEvent('search-espacios-event', {
+                detail,
+                bubbles: true,
+                composed: true
+            }));
+        });
+    }
+}
+customElements.define('search-form', SearchForm);
+/* ------------------ espacios-list ------------------ */ class EspaciosList extends HTMLElement {
+    constructor(){
+        super();
+        this.attachShadow({
+            mode: 'open'
+        });
+        this.shadowRoot.appendChild(cloneTpl('tpl-espacios-list'));
+        this.items = [];
+    }
+    setItems(items) {
+        this.items = items || [];
+        this._render();
+    }
+    appendItems(items) {
+        this.items = [
+            ...this.items,
+            ...items || []
+        ];
+        this._render();
+    }
+    _render() {
+        const ul = this.shadowRoot.getElementById('list');
+        ul.innerHTML = '';
+        (this.items || []).forEach((it)=>{
+            const li = document.createElement('li');
+            const card = document.createElement('espacio-card');
+            card.data = it;
+            li.appendChild(card);
+            ul.appendChild(li);
+        });
+    }
+}
+customElements.define('espacios-list', EspaciosList);
 /* ------------------ espacio-card ------------------ */ class EspacioCard extends HTMLElement {
     constructor(){
         super();
@@ -840,108 +941,7 @@ customElements.define('app-layout', AppLayout);
     }
 }
 customElements.define('espacio-card', EspacioCard);
-/* ------------------ search-form ------------------ */ class SearchForm extends HTMLElement {
-    constructor(){
-        super();
-        this.attachShadow({
-            mode: 'open'
-        });
-        this.shadowRoot.appendChild(cloneTpl('tpl-search-form'));
-    }
-    connectedCallback() {
-        const form = this.shadowRoot.querySelector('form');
-        form.addEventListener('submit', (e1)=>{
-            e1.preventDefault();
-            const fd = new FormData(form);
-            const q = (fd.get('q') || '').toString().trim();
-            const tipo = (fd.get('tipo') || '').toString();
-            const detail = {
-                q,
-                tipo
-            };
-            this.dispatchEvent(new CustomEvent('search-espacios-event', {
-                detail,
-                bubbles: true,
-                composed: true
-            }));
-        });
-    }
-}
-customElements.define('search-form', SearchForm);
-/* ------------------ search-espacios (orquestador) ------------------ */ class SearchEspacios extends HTMLElement {
-    constructor(){
-        super();
-        this.attachShadow({
-            mode: 'open'
-        });
-        this.shadowRoot.appendChild(cloneTpl('tpl-search-espacios'));
-        this.apiBase = window.API_BASE || '';
-        this._all = [];
-    }
-    connectedCallback() {
-        this.shadowRoot.addEventListener('search-espacios-event', (e1)=>this._onSearch(e1.detail));
-        this._list = this.shadowRoot.querySelector('espacios-list');
-        this._info = this.shadowRoot.getElementById('info');
-    }
-    async _onSearch({ q, tipo }) {
-        try {
-            const qs = new URLSearchParams();
-            if (tipo) qs.set('tipo', tipo);
-            if (q) qs.set('q', q);
-            qs.set('start', 0);
-            qs.set('end', 4);
-            const url = `${this.apiBase}/espacios${qs.toString() ? `?${qs.toString()}` : ''}`;
-            const res = await fetch(url);
-            if (!res.ok) throw new Error('network');
-            const body = await res.json();
-            this._all = Array.isArray(body.data) ? body.data : [];
-            this._render();
-        } catch (err) {
-            console.error(err);
-            this._info.textContent = 'Error al obtener datos.';
-            this._list.setItems([]);
-        }
-    }
-    _render() {
-        this._list.setItems(this._all);
-        this._info.textContent = `Mostrando ${this._all.length} resultados`;
-    }
-}
-customElements.define('search-espacios', SearchEspacios);
-/* ------------------ espacios-list ------------------ */ class EspaciosList extends HTMLElement {
-    constructor(){
-        super();
-        this.attachShadow({
-            mode: 'open'
-        });
-        this.shadowRoot.appendChild(cloneTpl('tpl-espacios-list'));
-        this.items = [];
-    }
-    setItems(items) {
-        this.items = items || [];
-        this._render();
-    }
-    appendItems(items) {
-        this.items = [
-            ...this.items,
-            ...items || []
-        ];
-        this._render();
-    }
-    _render() {
-        const ul = this.shadowRoot.getElementById('list');
-        ul.innerHTML = '';
-        (this.items || []).forEach((it)=>{
-            const li = document.createElement('li');
-            const card = document.createElement('espacio-card');
-            card.data = it;
-            li.appendChild(card);
-            ul.appendChild(li);
-        });
-    }
-}
-customElements.define('espacios-list', EspaciosList);
-/* ------------------ search-espacios (orquestador) ------------------ */ class SearchValoraciones extends HTMLElement {
+/* ------------------ search-valoraciones (orquestador) ------------------ */ class SearchValoraciones extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({
@@ -950,15 +950,11 @@ customElements.define('espacios-list', EspaciosList);
         this.shadowRoot.appendChild(cloneTpl('tpl-search-valoraciones'));
         this.apiBase = window.API_BASE || '';
         this._all = [];
+        this.hidden = true;
     }
     connectedCallback() {
         this._list = this.shadowRoot.querySelector('valoraciones-list');
         this._write = this.shadowRoot.querySelector('valoraciones-write');
-        this.shadowRoot.addEventListener('review-uploaded', ()=>{
-            if (this._id) this._toggleReviews({
-                e
-            });
-        });
         this.shadowRoot.addEventListener('review-uploaded', (ev)=>{
             const id = ev.detail?.id ?? null;
             if (id) this._toggleReviews({
@@ -982,8 +978,8 @@ customElements.define('espacios-list', EspaciosList);
             if (!res.ok) throw new Error('network');
             const body = await res.json();
             this._all = Array.isArray(body.data) ? body.data : [];
+            this.hidden = false;
             this._render();
-            this.setAttribute('open', '');
         } catch (err) {
             console.error(err);
             this._info.textContent = 'Error al obtener datos.';
@@ -991,8 +987,8 @@ customElements.define('espacios-list', EspaciosList);
         }
         else {
             this._all = null;
+            this.hidden = true;
             this._render();
-            this.removeAttribute('open');
         }
     }
     _render() {
@@ -1000,7 +996,7 @@ customElements.define('espacios-list', EspaciosList);
     }
 }
 customElements.define('search-valoraciones', SearchValoraciones);
-/* ------------------ espacios-list ------------------ */ class ValoracionesList extends HTMLElement {
+/* ------------------ valoraciones-list ------------------ */ class ValoracionesList extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({
@@ -1105,15 +1101,15 @@ customElements.define('valoraciones-card', ValoracionesCard);
     }
     connectedCallback() {
         const form = this.shadowRoot.getElementById('form');
-        form.addEventListener('submit', (e1)=>this.#onSubmit(e1));
+        form.addEventListener('submit', (e)=>this.#onSubmit(e));
     }
-    async #onSubmit(e1) {
-        e1.preventDefault();
+    async #onSubmit(e) {
+        e.preventDefault();
         if (!this._id) {
             alert('No se ha seleccionado espacio.');
             return;
         }
-        const form = e1.currentTarget;
+        const form = e.currentTarget;
         const fd = new FormData(form);
         const rating = Number(fd.get('rating') || 0);
         if (!rating) {
