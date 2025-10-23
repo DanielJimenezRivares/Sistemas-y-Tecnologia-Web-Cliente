@@ -4,7 +4,7 @@
   "description": "Ejercicio 2 - Parcel setup",
   "scripts": {
     "dev": "parcel serve --dist-dir dist ./index.html",
-    "build": "parcel build --dist-dir build --public-url --public-url \"/Sistemas-y-Tecnologia-Web-Cliente/Herramientas/Ejercicio 2\" ./index.html",
+    "build": "parcel build --dist-dir build --public-url /Sistemas-y-Tecnologia-Web-Cliente/Herramientas ./index.html",
     "deploy": "gh-pages -d build --dest \"Herramientas/Ejercicio 2\""
   },
   "devDependencies": {
