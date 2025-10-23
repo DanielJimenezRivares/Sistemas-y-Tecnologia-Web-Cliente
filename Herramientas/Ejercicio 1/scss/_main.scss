@@ -1,0 +1,100 @@
+@use "sass:color";
+
+main {
+    display: grid;
+    grid-template-areas: 
+        "menu content"
+        "testimonies testimonies";
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.testimonies-section {
+    grid-area: testimonies;
+    background-color: $primary-color;
+    color: black;
+    padding: 0.5*$padding;
+    text-align: center;
+}
+
+.testimonies-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+.testimonies-list > * {
+    flex: 1;
+}
+
+.testimony {
+    @include block-style;
+    display: block;
+    padding: $padding;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.menu {
+    grid-area: menu;
+    @include flex-center;
+    color: black;
+    border: 2px solid black;
+    padding: $padding;
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: $secondary-color;
+    padding: 35px;
+    color: black;
+    gap: 35px;
+}
+
+.content > * {
+    flex: 1;
+}
+
+.description-block {
+    @include block-style;
+}
+
+.products-block {
+    @include block-style;
+    display: block;
+}
+
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: $padding;
+}
+
+.product {
+    @extend .testimony;
+    background-color: color.adjust($tertiary-color, $lightness: 25%);
+}
+
+img.icon {
+    height: 100px;
+}
+
+p.paragraph {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding-left: $padding;
+    padding-right: $padding;
+}
