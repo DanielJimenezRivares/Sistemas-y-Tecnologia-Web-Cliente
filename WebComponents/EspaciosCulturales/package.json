@@ -1,0 +1,28 @@
+{
+  "name": "espacios-culturales",
+  "version": "1.0.0",
+  "description": "Espacios Culturales - Web Components",
+  "type": "module",
+  "scripts": {
+    "api-dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "api-build": "cross-env NODE_ENV=production node src/server.js",
+    "lint": "eslint .",
+    "dev": "parcel serve --dist-dir dist ./index.html",
+    "local-build": "parcel build --dist-dir build ./index.html --public-url ./"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.4",
+    "eslint": "^9.10.0",
+    "parcel": "^2.16.0",
+    "@parcel/transformer-sass": "^2.16.0",
+    "sass": "^1.90.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

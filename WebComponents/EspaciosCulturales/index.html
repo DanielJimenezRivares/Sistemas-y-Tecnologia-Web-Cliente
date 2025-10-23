@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Espacios Culturales</title>
+    <script>window.API_BASE = 'http://localhost:3000';</script>
+    <script type="module" src="./js/components.js"></script>
+    <link rel="stylesheet" href="./scss/style.scss">
+</head>
+<!-- ===== Templates Web Components ===== -->
+
+<!-- app-header -->
+<template id="tpl-app-header">
+  <style>
+    :host{ display:block; background:#0b5ed7; color:white; padding:20px }
+    .wrap{ display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+    h1{font-size:2.5rem;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;margin:0}
+  </style>
+  <div class="wrap">
+    <h1></h1>
+  </div>
+</template>
+
+<!-- app-footer -->
+<template id="tpl-app-footer">
+  <style>
+    :host{ display:block; background:#b6c6d7; color:#333; margin:0; padding:20px}
+    .wrap{font-size:1.25rem; display:flex; flex-direction:row; align-items:center; justify-content:center; text-align:center;}
+  </style>
+  <div class="wrap">
+    <slot>©&nbsp; <span class="y"></span> &nbsp;- Espacios Culturales</slot>
+  </div>
+</template>
+
+<!-- app-layout -->
+<template id="tpl-app-layout">
+  <style>
+    :host { display: block; box-sizing: border-box; min-height: 100vh; }
+    .page { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; /* header - main - footer */ }
+    ::slotted([slot="main"]) { display: flex; flex-direction: column; min-height: 0; height: 100%; padding:20px}
+  </style>
+  <div class="page">
+    <slot name="header"></slot>
+    <slot name="main"></slot>
+    <slot name="footer"></slot>
+  </div>
+</template>
+
+<!-- espacio-card -->
+<template id="tpl-espacio-card">
+  <style>
+    :host{ display:block; padding:4px }
+    .card{ border:1px solid #ddd; padding:16px; border-radius:8px; background:white; }
+    .row{ display:flex; justify-content:space-between; align-items:center; margin:0px; padding:0px }
+    .title{ font-weight:700; margin:3px }
+    .meta{ color:#000000; font-size:0.9em; margin:3px }
+    .types{ font-size:0.85em; color:#2b7; padding:4px 6px; border-radius:4px; background:#f0fff4; display:inline-block }
+    .actions{ margin-top:8px }
+    a.link{ color:#06c; text-decoration:none }
+  </style>
+  <div class="card">
+    <div class="row">
+      <div>
+        <div class="title" id="title"></div>
+        <div class="meta" id="dir"></div>
+      </div>
+      <div class="types-wrap"></div>
+    </div>
+    <div class="meta" id="horario"></div>
+    <div class="meta" id="tel"></div>
+    <div class="meta" id="web"></div>
+    <div class="meta" id="actions"></div>
+  </div>
+</template>
+
+<!-- search-form -->
+<template id="tpl-search-form">
+  <style>
+    :host{ display:block; }
+    .form-wrap{ display:flex; justify-content:center }
+    .form{ display:flex; gap:8px; align-items:center; width:100%}
+    input{ flex:2; padding:10px; border:1px solid #ccc; border-radius:6px }
+    select{ flex:1; padding:10px; border:1px solid #ccc; border-radius:6px }
+    button{ padding:10px 15px 10px 15px; border-radius:6px; border:0; background:#036; color:white; white-space:nowrap }
+  </style>
+  <div class="form-wrap">
+    <form class="form">
+      <input name="q" placeholder="Buscar (nombre, dirección)" />
+      <select name="tipo">
+        <option value="">Todos los tipos</option>
+        <option value="archivo">archivo</option>
+        <option value="auditorio">auditorio</option>
+        <option value="biblioteca">biblioteca</option>
+        <option value="centro_cultural">centro_cultural</option>
+        <option value="centro_docente">centro_docente</option>
+        <option value="centro_interpretacion">centro_interpretacion</option>
+        <option value="cine">cine</option>
+        <option value="galeria_arte">galeria_arte</option>
+        <option value="museo">museo</option>
+        <option value="sala_conciertos">sala_conciertos</option>
+        <option value="sala_exposiciones">sala_exposiciones</option>
+        <option value="sala_polivalente">sala_polivalente</option>
+        <option value="teatro">teatro</option>
+      </select>
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+</template>
+
+<!-- espacios-list -->
+<template id="tpl-espacios-list">
+  <style>
+    :host{ display:flex; flex-direction:column; width:100%; flex:1; min-height:0 }
+    ul{
+      list-style:none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    li{ width:100% }
+  </style>
+  <ul id="list"></ul>
+</template>
+
+<!-- search-espacios (contenedor/orquestador) -->
+<template id="tpl-search-espacios">
+  <style>
+    :host{ display:block; width:100%; height:100%;}
+    #results{
+      margin-top:12px;
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      min-height:0; /* internal scrolling in flex container */
+    }
+    .info{
+      color:#666;
+      font-size:0.9em;
+      margin-top:6px;
+      text-align:center
+    }
+  </style>
+  <div>
+    <search-form></search-form>
+    <div id="results">
+      <espacios-list></espacios-list>
+      <div class="info" id="info"></div>
+    </div>
+  </div>
+</template>
+<body>
+    <app-layout>
+        <app-header slot="header" title="Buscador de Espacios Culturales"></app-header>
+        
+        <main slot="main">
+            <search-espacios></search-espacios>
+        </main>
+        
+        <app-footer slot="footer"></app-footer>
+    </app-layout>
+</body>
+</html>
