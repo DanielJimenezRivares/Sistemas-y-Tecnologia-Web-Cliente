@@ -1,0 +1,14 @@
+{
+  "name": "ciclo-vida",
+  "version": "1.0.0",
+  "description": "Web Component - Ciclo de Vida",
+  "scripts": {
+    "dev": "parcel serve --dist-dir dist ./index.html",
+    "local-build": "parcel build --dist-dir build ./index.html --public-url ./"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0",
+    "@parcel/transformer-sass": "^2.16.0",
+    "sass": "^1.90.0"
+  }
+}

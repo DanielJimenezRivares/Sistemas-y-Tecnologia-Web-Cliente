@@ -24,13 +24,13 @@ const paths = {
     }
 };
 
-// Clean dist folders
+// Elimina las carpetas de distribución
 function clean() {
     const pathsToDelete = ['css', 'js/dist', 'img/dist'];
     return Promise.all(pathsToDelete.map((p) => rimraf(p)));
 }
 
-// Compile SASS, create sourcemaps and minify CSS
+// Compilar SASS, crear sourcemaps y minificar CSS
 function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sourcemaps.init())
@@ -42,7 +42,7 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
-// Optimize JavaScript files
+// Optimizar archivos JavaScript
 function scripts() {
     return gulp.src(paths.scripts.src)
         .pipe(sourcemaps.init())
@@ -53,7 +53,7 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
-// Optimize images
+// Optimizar imágenes
 function images() {
     return gulp.src(paths.images.src, { encoding: false })
         .pipe(imagemin([
@@ -71,7 +71,7 @@ function images() {
         .pipe(gulp.dest(paths.images.dest))
 }
 
-// Watch files
+// Observar cambios en archivos y recarga el navegador
 function watch() {
     browserSync.init({
         server: {
@@ -85,10 +85,8 @@ function watch() {
     gulp.watch("*.html").on('change', browserSync.reload);
 }
 
-// Define complex tasks
 const build = gulp.series(clean, gulp.parallel(styles, scripts, images));
 
-// Export tasks
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;

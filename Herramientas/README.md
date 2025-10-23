@@ -97,6 +97,8 @@ exports.watch = watch;
 
 Este ejercicio usa el empaquetador Parcel para construir los assets y `gh-pages` para desplegar la carpeta generada en GitHub Pages.
 
+Página desplegada en: https://danieljimenezrivares.github.io/Sistemas-y-Tecnologia-Web-Cliente/Herramientas/Ejercicio%202/
+
 ### ¿Qué hace Parcel?
 - Compila Sass referenciados a CSS y los minifica
 - Minifica archivos JavaScript referenciados
