@@ -330,7 +330,6 @@ class ValoracionesCard extends HTMLElement {
 
   _render(){
     const d = this._data || {};
-    // admite claves variadas del backend
     const user = d.username ?? d.user ?? 'Anónimo';
     const rating = d.rating ?? 0;
     const text = d.review ?? d.text ?? '';
@@ -349,7 +348,6 @@ class ValoracionesCard extends HTMLElement {
       textEl.hidden = true;
     }
 
-    // A11y: describe con aria-label la puntuación
     this.shadowRoot.querySelector('.stars')
       .setAttribute('aria-label', `Puntuación: ${Number(rating)||0} de 5`);
   }
@@ -396,7 +394,6 @@ class ValoracionesWrite extends HTMLElement {
     };
 
     try{
-      // Adjust if your endpoint differs:
       const url = `${this.apiBase}/valoraciones`;
       const res = await fetch(url, {
         method: 'POST',
