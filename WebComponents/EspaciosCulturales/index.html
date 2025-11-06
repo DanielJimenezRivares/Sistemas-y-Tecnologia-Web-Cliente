@@ -91,7 +91,7 @@
       display:flex;
       flex-direction:column;
       flex:1;
-      min-height:0; /* internal scrolling in flex container */
+      min-height:0;
     }
     .info{
       color:#666;
@@ -181,7 +181,7 @@
       display:flex;
       flex-direction:column;
       flex:1;
-      min-height:0; /* internal scrolling in flex container */
+      min-height:0;
     }
     .info{
       color:#666;
@@ -204,7 +204,7 @@
     :host {
       display: flex;
       flex-direction: column;
-      align-items: center;   /* center cards horizontally */
+      align-items: center;
       width: 100%;
       flex: 1;
       min-height: 0;
@@ -221,7 +221,7 @@
       scroll-behavior: smooth;
       display: flex;
       flex-direction: column;
-      align-items: center;   /* ensure cards center */
+      align-items: center;
     }
     li {
       width: 100%;
@@ -237,14 +237,14 @@
   <style>
     :host {
       display: flex;
-      justify-content: center;        /* center horizontally inside parent */
+      justify-content: center;
       width: 100%;
       box-sizing: border-box;
       margin: 8px 0;
     }
     :host([hidden]) { display:none; }
     .card {
-      width: 100%;                     /* smaller than container to appear centered */
+      width: 100%;
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 10px;
@@ -355,7 +355,7 @@
   </style>
 
   <form id="form" novalidate>
-    <!-- Row 1: name + rating -->
+    <!-- Fila 1: Nombre + valoración -->
     <div class="row">
       <input name="username" placeholder="Tu nombre (opcional)" />
       <select name="rating" required aria-label="Rating">
@@ -368,10 +368,10 @@
       </select>
     </div>
 
-    <!-- Row 2: review -->
+    <!-- Fila 3: comentario -->
     <textarea name="review" placeholder="Escribe una reseña (opcional)"></textarea>
 
-    <!-- Row 3: submit -->
+    <!-- Fila 3: Botón subir -->
     <button type="submit">Subir reseña</button>
   </form>
 </template>
