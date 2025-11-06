@@ -1,6 +1,71 @@
-## Documentación APIs
+# WebComponents: Espacios Culturales
 
-Esta sección resume los endpoints disponibles en la API.
+Este proyecto implementa una aplicación web para explorar espacios culturales utilizando Web Components nativos. La aplicación permite buscar, filtrar y visualizar información detallada de diferentes espacios culturales, así como gestionar valoraciones de usuarios.
+
+## Ejecución del Proyecto
+
+Para ejecutar el proyecto localmente, necesitarás tener Node.js instalado. Sigue estos pasos:
+
+1. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+2. Inicia el servidor de la API (en un terminal):
+   ```bash
+   npm run api-build
+   ```
+   La API estará disponible en `http://localhost:3000`
+
+3. En otro terminal, inicia el servidor de desarrollo para la aplicación web:
+   ```bash
+   npm run dev
+   ```
+   La aplicación web estará disponible en `http://localhost:1234`
+
+**Nota**: Es importante usar el servidor de desarrollo (`npm run dev`) para la aplicación web para evitar problemas de CORS al interactuar con la API.
+
+## Web Components Implementados
+
+### Componentes Estructurales
+- `<app-layout>`: Componente principal que estructura la aplicación
+- `<app-header>`: Encabezado de la aplicación, muestra el título principal
+- `<app-footer>`: Pie de página con información del año actual
+
+### Componentes Funcionales
+
+#### Buscador de espacios Culturales
+- `<search-espacios>`: Componente orquestador que gestiona la búsqueda y visualización de espacios
+- `<search-form>`: Formulario de búsqueda con filtros por tipo y texto libre
+- `<espacios-list>`: Lista de espacios culturales que muestra los resultados
+- `<espacio-card>`: Tarjeta que muestra la información detallada de cada espacio cultural, incluyendo:
+  - Nombre y dirección
+  - Tipos de espacio
+  - Horario y teléfono
+  - Enlace a la web
+  - Sistema de valoraciones integrado
+
+### Sistema de Valoraciones
+- `<search-valoraciones>`: Componente orquestador que gestiona la búsqueda y visualización de valoraciones
+- `<valoraciones-list>`: Lista que muestra las valoraciones de un espacio cultural
+- `<valoraciones-card>`: Tarjeta individual que muestra una valoración, incluyendo:
+  - Nombre de usuario
+  - Puntuación con sistema de estrellas
+  - Fecha y hora de la valoración
+  - Texto de la reseña
+- `<valoraciones-write>`: Formulario para crear nuevas valoraciones con:
+  - Campo de nombre de usuario
+  - Selector de puntuación
+  - Campo para escribir la reseña
+  - Validación de datos antes del envío
+
+## Características Destacadas
+- Uso de Shadow DOM para encapsulación de estilos
+- Eventos personalizados para la comunicación entre componentes
+- Renderizado dinámico de listas y contenido
+- Integración con API REST para datos y valoraciones
+
+## Documentación API
 Se detallan método, ruta, parámetros/entrada y forma de respuesta (salida) de forma simple.
 
 ### Rutas de `espacios`

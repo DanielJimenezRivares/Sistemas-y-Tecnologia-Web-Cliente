@@ -1,4 +1,4 @@
-6027
+6021
 152C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\transformer-html\lib\HTMLTransformer.js134056736019391404 0
 142C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint\lib\rules\constructor-super.js134056736025950037 0
 150C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\lightningcss\node_modules\detect-libc\LICENSE134056736018671466 0
@@ -34,17 +34,10 @@
 118C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\qs\LICENSE.md134056736023622832 0
 96C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\data134056732718686506 1
 172C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\mdn-css-unicode-bidi-isolate-override.js134056736032678201 0
-123C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\express\lib\router134056736023207657 1
-132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\nodemon\lib\config\index.js134056736023387633 0
-111C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\braces134056736022640900 1
-115C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\mime-types134056736020804673 1
-95C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\src134056759793008042 1
-122C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\path-key\index.js134056736019271393 0
-96C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\dist134068998367780570 1
-136C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\regions\BA.js134056736025940036 0
-130C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\brace-expansion\README.md134056736020313028 0
-165C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\_\_class_static_private_method_get\package.json134056736028444415 0
-133C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\json-schema-traverse\LICENSE134056736020834636 0
+123C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\is-extglob\LICENSE134056736019815583 0
+112C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel134056736012047295 1
+162C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc134056736022112435 1
+101C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\README.md134068996954868667 0
 138C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\eot.js134056736030278899 0
 131C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\simple-update-notifier\src134056736023457681 1
 134C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\source-map-js\source-map.d.ts134056736023712837 0
@@ -74,12 +67,13 @@
 158C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\src\_object_without_properties_loose.mjs134056736029988964 0
 143C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\type-fest\source\iterable-element.d.ts134056736023802841 0
 142C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\math-intrinsics\constants\maxValue.js134056736022840873 0
-123C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\is-extglob\LICENSE134056736019815583 0
-112C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel134056736012047295 1
-162C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc134056736022112435 1
-101C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\README.md134068996954868667 0
 118C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\shebang-regex134056736020613827 1
 96C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\scss134056662273833379 1
+123C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\express\lib\router134056736023207657 1
+132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\nodemon\lib\config\index.js134056736023387633 0
+111C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\braces134056736022640900 1
+115C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\mime-types134056736020804673 1
+95C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\src134056759793008042 1
 117C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\import-fresh134056736020683826 1
 118C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\array-flatten134056736020193027 1
 128C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\normalize-path\index.js134056736019201424 0
@@ -194,6 +188,15 @@
 133C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\type-fest\source\except.d.ts134056736023377640 0
 130C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\esm\index.js134056736027911830 0
 111C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@lezer134056736012027432 1
+116C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\detect-libc134056736021210659 1
+132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint\lib\rules\no-void.js134056736030648665 0
+127C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\browserslist\README.md134056736022052432 0
+135C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\type-fest\source\value-of.d.ts134056736025150548 0
+148C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\localecompare.js134056736032536804 0
+159C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest_remap.c134056736026681508 0
+130C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\cookie-signature\index.js134056736019855582 0
+143C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\transformer-sass\lib\modern.js134056736021012214 0
+114C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\cross-env134056736263865501 1
 146C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\lmdb\node_modules\node-addon-api\index.js134056736023357641 0
 137C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint\lib\rules\prefer-const.js134056736030996280 0
 158C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@eslint\eslintrc\lib\config-array\extracted-config.js134056736024092823 0
@@ -318,15 +321,6 @@
 109C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\cors134056736021139570 1
 134C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\sass\types\legacy\render.d.ts134056736026420068 0
 141C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\tls1-3.js134056736035022096 0
-116C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\detect-libc134056736021210659 1
-132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint\lib\rules\no-void.js134056736030648665 0
-127C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\browserslist\README.md134056736022052432 0
-135C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\type-fest\source\value-of.d.ts134056736025150548 0
-148C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\localecompare.js134056736032536804 0
-159C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest_remap.c134056736026681508 0
-130C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\cookie-signature\index.js134056736019855582 0
-143C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\transformer-sass\lib\modern.js134056736021012214 0
-114C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\cross-env134056736263865501 1
 116C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\cross-spawn134056736022570903 1
 118C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\parent-module134056736020173032 1
 132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\object-inspect\CHANGELOG.md134056736024650526 0
@@ -1847,6 +1841,7 @@
 133C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\semver\internal\constants.js134056736022730891 0
 135C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\semver\internal\identifiers.js134056736023592827 0
 132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\semver\internal\lrucache.js134056736024052829 0
+133C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint-scope\lib\variable.js134056736023167651 0
 132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\rust\src\browser.js134056736020603821 0
 134C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\object-inspect\test\number.js134056736024188459 0
 140C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\pstree.remy\tests\fixtures\index.js134056736021622428 0
@@ -2188,6 +2183,7 @@
 125C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\ordered-binary\tests134056736021306187 1
 135C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@eslint\config-array\README.md134056736023702817 0
 124C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\path-key\index.d.ts134056736020824646 0
+122C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\path-key\index.js134056736019271393 0
 123C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\path-key\readme.md134056736020363044 0
 127C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\path-exists\index.d.ts134056736019231401 0
 151C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\css-text-justify.js134056736029262394 0
@@ -2264,7 +2260,6 @@
 122C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\keyv\src\index.js134056736020834636 0
 132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\object-inspect\test\browser134056736022455780 1
 127C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\msgpackr\node-index.js134056736023447693 0
-128C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\dist\EspaciosCulturales.fdf5ecaf.css134068998367491732 0
 139C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\fast-json-stable-stringify\LICENSE134056736018551397 0
 136C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\regions\ZW.js134056736036057152 0
 143C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\watcher-win32-x64\watcher.node134056736022515773 0
@@ -2952,6 +2947,10 @@
 157C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\json-stable-stringify-without-jsonify\example\str.js134056736021752432 0
 144C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\express\node_modules\debug\src\debug.js134056736022960889 0
 139C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\json-schema-traverse\.eslintrc.yml134056736019281398 0
+136C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\regions\BA.js134056736025940036 0
+130C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\brace-expansion\README.md134056736020313028 0
+165C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\_\_class_static_private_method_get\package.json134056736028444415 0
+133C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\json-schema-traverse\LICENSE134056736020834636 0
 138C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\json-schema-traverse\package.json134056736018551397 0
 130C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\json-schema-traverse\spec134056736022252443 1
 140C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\core\test\fixtures\main-mjs134056736028522247 1
@@ -3246,7 +3245,7 @@
 144C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\finalhandler\node_modules\ms\license.md134056736019925580 0
 147C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\transforms3d.js134056736035082090 0
 146C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\finalhandler\node_modules\debug\.eslintrc134056736021562427 0
-114C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\data\valoraciones.json134068998950259212 0
+114C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\data\valoraciones.json134057101147507639 0
 144C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\finalhandler\node_modules\debug\LICENSE134056736020523104 0
 148C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\finalhandler\node_modules\debug\src\node.js134056736023327640 0
 143C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\core\lib\public\BundleGroup.js134056736025492019 0
@@ -3371,7 +3370,6 @@
 134C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint-scope\lib\reference.js134056736022325719 0
 128C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\packager-js\lib134056736023932838 1
 130C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint-scope\lib\scope.js134056736023050885 0
-133C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint-scope\lib\variable.js134056736023167651 0
 135C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\cjs\_decorate.cjs134056736025230547 0
 150C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\esm\_class_private_method_set.js134056736027071517 0
 132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\eslint-scope\lib\version.js134056736023297653 0
@@ -3899,7 +3897,6 @@
 142C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\electron-to-chromium\full-versions.js134056736020992211 0
 144C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\electron-to-chromium\full-versions.json134056736022435758 0
 135C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\cross-env\src\bin\cross-env.js134056736263827332 0
-131C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\dist\EspaciosCulturales.25cbf142.js.map134068998367491732 0
 138C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\electron-to-chromium\package.json134056736022580877 0
 137C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\electron-to-chromium\versions.js134056736021542367 0
 136C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\regions\ME.js134056736032738208 0
@@ -4122,7 +4119,6 @@
 157C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\scrollintoviewifneeded.js134056736034239055 0
 146C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\utils\test\input\config\config.js134056736023267635 0
 136C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\regions\AO.js134056736024820539 0
-132C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\dist\EspaciosCulturales.fdf5ecaf.css.map134068998367491732 0
 136C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\regions\AR.js134056736024940552 0
 136C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\regions\AX.js134056736025880029 0
 140C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\caniuse-lite\data\features\http3.js134056736031521632 0
@@ -4858,7 +4854,6 @@
 154C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\reporter-dev-server\lib\ServerReporter.js134056736024012824 0
 163C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\_\_unsupported_iterable_to_array\package.json134056736029212393 0
 163C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\_\_tagged_template_literal_loose\package.json134056736029035751 0
-127C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\dist\EspaciosCulturales.25cbf142.js134068998367417612 0
 149C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\_\_super_prop_base\package.json134056736029035751 0
 149C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\_\_sliced_to_array\package.json134056736029015732 0
 150C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@swc\helpers\_\_set_prototype_of\package.json134056736028967346 0
@@ -5489,7 +5484,6 @@
 157C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\runtime-js\src\helpers\worker\wasm-loader.js134056736025532014 0
 154C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\runtime-js\src\helpers\node\css-loader.js134056736022910887 0
 153C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\runtime-js\src\helpers\node\js-loader.js134056736024650526 0
-107C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\dist\index.html134068998367780570 0
 155C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\runtime-js\src\helpers\node\node-loader.js134056736025000538 0
 155C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\runtime-js\src\helpers\node\wasm-loader.js134056736025492019 0
 158C:\Users\driva\Downloads\Sistemas-y-Tecnologia-Web-Cliente\WebComponents\EspaciosCulturales\node_modules\@parcel\runtime-js\src\helpers\browser\html-loader.js134056736023812831 0

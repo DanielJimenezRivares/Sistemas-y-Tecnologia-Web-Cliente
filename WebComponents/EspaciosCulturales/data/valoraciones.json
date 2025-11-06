@@ -1,88 +1,13 @@
 {
   "1": {
-    "sum": 15,
-    "count": 4,
+    "sum": 5,
+    "count": 1,
     "reviews": [
       {
-        "rating": 4,
+        "rating": 5,
         "review": "Fantástico",
-        "username": "Usuario 1",
-        "timestamp": "2025-10-23T15:57:50.952Z"
-      },
-      {
-        "rating": 1,
-        "review": "Fatal, un desastre de proporciones épicas.",
-        "username": "Usuario 2",
-        "timestamp": "2025-10-23T15:58:09.826Z"
-      },
-      {
-        "rating": 5,
-        "review": "dffds",
-        "username": "Usuario 1",
-        "timestamp": "2025-10-23T16:21:43.853Z"
-      },
-      {
-        "rating": 5,
         "username": "Anónimo",
-        "timestamp": "2025-10-23T16:21:54.751Z"
-      }
-    ]
-  },
-  "2": {
-    "sum": 9,
-    "count": 2,
-    "reviews": [
-      {
-        "rating": 5,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T16:01:08.585Z"
-      },
-      {
-        "rating": 4,
-        "review": "Perfecto",
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T16:01:21.763Z"
-      }
-    ]
-  },
-  "9": {
-    "sum": 23,
-    "count": 7,
-    "reviews": [
-      {
-        "rating": 5,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T15:18:06.899Z"
-      },
-      {
-        "rating": 4,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T15:18:09.967Z"
-      },
-      {
-        "rating": 4,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T15:18:12.933Z"
-      },
-      {
-        "rating": 4,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T15:18:15.326Z"
-      },
-      {
-        "rating": 2,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T15:18:17.697Z"
-      },
-      {
-        "rating": 2,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T15:18:20.990Z"
-      },
-      {
-        "rating": 2,
-        "username": "Anónimo",
-        "timestamp": "2025-10-23T15:18:24.033Z"
+        "timestamp": "2025-11-06T10:51:35.027Z"
       }
     ]
   }
