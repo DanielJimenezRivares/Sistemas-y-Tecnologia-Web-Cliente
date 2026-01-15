@@ -207,14 +207,14 @@
       });
     }
   }
-})({"eR7Ob":[function(require,module,exports,__globalThis) {
+})({"67Wke":[function(require,module,exports,__globalThis) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "99910accb3488ccc";
+var HMR_ENV_HASH = "7fcaccf8b6123ff8";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "6b4bdf3c25cbf142";
+module.bundle.HMR_BUNDLE_ID = "8c44afb8738a43d4";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -712,7 +712,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"gREN8":[function(require,module,exports,__globalThis) {
+},{}],"6zGeF":[function(require,module,exports,__globalThis) {
 const cloneTpl = (id)=>{
     const t = document.getElementById(id);
     if (!t) throw new Error(`Template no encontrado: #${id}`);
@@ -1063,7 +1063,6 @@ customElements.define('valoraciones-list', ValoracionesList);
     }
     _render() {
         const d = this._data || {};
-        // admite claves variadas del backend
         const user = d.username ?? d.user ?? "An\xf3nimo";
         const rating = d.rating ?? 0;
         const text = d.review ?? d.text ?? '';
@@ -1079,7 +1078,6 @@ customElements.define('valoraciones-list', ValoracionesList);
             textEl.textContent = '';
             textEl.hidden = true;
         }
-        // A11y: describe con aria-label la puntuación
         this.shadowRoot.querySelector('.stars').setAttribute('aria-label', `Puntuaci\xf3n: ${Number(rating) || 0} de 5`);
     }
 }
@@ -1123,7 +1121,6 @@ customElements.define('valoraciones-card', ValoracionesCard);
             review: (fd.get('review') || '').toString().trim() || undefined
         };
         try {
-            // Adjust if your endpoint differs:
             const url = `${this.apiBase}/valoraciones`;
             const res = await fetch(url, {
                 method: 'POST',
@@ -1150,8 +1147,8 @@ customElements.define('valoraciones-card', ValoracionesCard);
 }
 customElements.define('valoraciones-write', ValoracionesWrite);
 
-},{}]},["eR7Ob","gREN8"], "gREN8", "parcelRequire05b6", {})
-let {"*": _, } = parcelRequire05b6("gREN8");
+},{}]},["67Wke","6zGeF"], "6zGeF", "parcelRequire05b6", {})
+let {"*": _, } = parcelRequire05b6("6zGeF");
 export {_ as default, };
 
-//# sourceMappingURL=EspaciosCulturales.25cbf142.js.map
+//# sourceMappingURL=web.738a43d4.js.map

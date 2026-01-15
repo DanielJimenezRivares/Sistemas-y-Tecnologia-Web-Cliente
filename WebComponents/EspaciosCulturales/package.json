@@ -1,28 +1,21 @@
 {
-  "name": "espacios-culturales",
-  "version": "1.0.0",
-  "description": "Espacios Culturales - Web Components",
-  "type": "module",
+  "name": "stwc-espacios-culturales",
+  "private": true,
+  "workspaces": [
+    "api",
+    "web"
+  ],
   "scripts": {
-    "api-dev": "cross-env NODE_ENV=development nodemon src/server.js",
-    "api-build": "cross-env NODE_ENV=production node src/server.js",
-    "lint": "eslint .",
-    "dev": "parcel serve --dist-dir dist ./index.html",
-    "build": "parcel build --dist-dir build ./index.html --public-url ./"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "start": "concurrently -n api,web -c auto \"npm run start -w api\" \"npm run start -w web\"",
+    "dev": "concurrently -n api,web -c auto \"npm run dev -w api\" \"npm run dev -w web\"",
+    "build": "npm run build -w web",
+    "lint": "npm run lint -w api && npm run lint -w web",
+    "clean": "npm run clean -w api && npm run clean -w web"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "nodemon": "^3.1.4",
-    "eslint": "^9.10.0",
-    "parcel": "^2.16.0",
-    "@parcel/transformer-sass": "^2.16.0",
-    "sass": "^1.90.0"
+    "concurrently": "^9.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   }
 }

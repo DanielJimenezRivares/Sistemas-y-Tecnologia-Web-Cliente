@@ -9,8 +9,8 @@ const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_PATH = path.resolve(__dirname, "../../data/valoraciones.json");
-console.log("🗂️ Valoraciones DB path:", DATA_PATH);
+const DATA_PATH = path.resolve(__dirname, "../data/valoraciones.json");
+console.log("Valoraciones DB path:", DATA_PATH);
 
 // ---------- Utils de persistencia ----------
 function ensureDataFile() {

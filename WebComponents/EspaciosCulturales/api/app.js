@@ -1,8 +1,8 @@
 // src/app.js
 import express from "express";
 import cors from "cors";
-import espaciosRouter from "./api/espacios.routes.js";
-import valoracionesRouter from "./api/valoraciones.routes.js";
+import espaciosRouter from "./routes/espacios.routes.js";
+import valoracionesRouter from "./routes/valoraciones.routes.js";
 
 const app = express();
 

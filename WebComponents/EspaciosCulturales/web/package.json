@@ -1,0 +1,24 @@
+{
+  "name": "espacios-culturales",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Espacios Culturales - Web Components",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel serve --dist-dir dist ./index.html",
+    "build": "parcel build --dist-dir build ./index.html --public-url ./",
+    "lint": "eslint . --ext .js,.mjs",
+    "clean": "rimraf dist build .parcel-cache"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.3",
+    "eslint": "^9.10.0",
+    "parcel": "^2.16.3",
+    "rimraf": "^6.1.2",
+    "sass": "^1.90.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

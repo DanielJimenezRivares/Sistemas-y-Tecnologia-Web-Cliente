@@ -8,7 +8,7 @@ const router = express.Router();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const DATA_PATH = path.resolve(__dirname, "../../data/espacios-culturales.json");
+const DATA_PATH = path.resolve(__dirname, "../data/espacios-culturales.json");
 
 let RAW = [];
 try {

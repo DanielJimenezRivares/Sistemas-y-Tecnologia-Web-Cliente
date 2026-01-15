@@ -2,28 +2,20 @@
 
 Este proyecto implementa una aplicación web para explorar espacios culturales utilizando Web Components nativos. La aplicación permite buscar, filtrar y visualizar información detallada de diferentes espacios culturales, así como gestionar valoraciones de usuarios.
 
-## Ejecución del Proyecto
+## Estructura del repositorio
 
-Para ejecutar el proyecto localmente, necesitarás tener Node.js instalado. Sigue estos pasos:
+- `web/` → Frontend (Web Components) con Parcel + Sass
+- `api/` → Backend (API REST) con Express
 
-1. Instala las dependencias:
-   ```bash
-   npm install
-   ```
+## Ejecución en local
 
-2. Inicia el servidor de la API (en un terminal):
-   ```bash
-   npm run api-build
-   ```
-   La API estará disponible en `http://localhost:3000`
+```bash
+npm install
+npm start
+```
 
-3. En otro terminal, inicia el servidor de desarrollo para la aplicación web:
-   ```bash
-   npm run dev
-   ```
-   La aplicación web estará disponible en `http://localhost:1234`
-
-**Nota**: Es importante usar el servidor de desarrollo (`npm run dev`) para la aplicación web para evitar problemas de CORS al interactuar con la API.
+La API estará disponible en http://localhost:3000.
+La web estará disponible en http://localhost:1234 (o el puerto que indique Parcel).
 
 ## Web Components Implementados
 
