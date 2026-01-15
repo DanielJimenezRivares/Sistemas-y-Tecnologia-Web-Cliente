@@ -8,7 +8,7 @@
     "api-build": "cross-env NODE_ENV=production node src/server.js",
     "lint": "eslint .",
     "dev": "parcel serve --dist-dir dist ./index.html",
-    "local-build": "parcel build --dist-dir build ./index.html --public-url ./"
+    "build": "parcel build --dist-dir build ./index.html --public-url ./"
   },
   "dependencies": {
     "cors": "^2.8.5",

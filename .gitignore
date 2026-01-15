@@ -1,0 +1,9 @@
+# Node / Bundlers
+**/node_modules/
+**/.parcel-cache/
+**/.cache/
+**/public/
+
+# OS / env
+**/.DS_Store
+**/.env*
