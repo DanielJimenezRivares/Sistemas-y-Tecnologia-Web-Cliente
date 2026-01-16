@@ -1,0 +1,67 @@
+.wrap {
+  composes: panel from "./panel.module.scss";
+
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imageBox {
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.6);
+  aspect-ratio: 1 / 1;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  display: block;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%; 
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px 12px;
+  align-items: start;
+}
+
+.k {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.v {
+  color: var(--text);
+  word-break: break-word;
+}
+
+.v a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.v a:hover {
+  text-decoration: underline;
+}

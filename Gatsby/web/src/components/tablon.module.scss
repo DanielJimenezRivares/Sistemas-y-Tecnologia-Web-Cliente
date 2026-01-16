@@ -1,0 +1,39 @@
+.wrap {
+  composes: panel from "./panel.module.scss";
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.error {
+  margin-top: 10px;
+  color: crimson;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+  padding-bottom: 6px;
+}
+
+.list::-webkit-scrollbar { width: 10px; }
+.list::-webkit-scrollbar-thumb {
+  background: rgba(15,23,42,0.18);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}

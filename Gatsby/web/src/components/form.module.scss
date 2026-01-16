@@ -1,0 +1,63 @@
+.formPanel {
+  composes: panel from "./panel.module.scss";
+}
+
+.h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.inlineLabel {
+  color: var(--muted);
+  font-size: 0.9em;
+  position: relative;
+  top: -1px;
+}
+
+.input, .textarea, .select {
+  padding: 10px;
+  border: 1px solid rgba(15,23,42,0.18);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+  outline: none;
+
+  font: inherit;
+}
+
+.input, .select {
+  height: 42px;
+  line-height: 22px;
+  padding: 0 10px;
+  font: inherit;
+}
+
+.select {
+  padding-right: 28px;
+}
+
+.input:focus, .textarea:focus, .select:focus {
+  border-color: rgba(11,94,215,0.55);
+  box-shadow: 0 0 0 4px rgba(11,94,215,0.12);
+}
+
+.textarea { resize: vertical; }
+
+.button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.12);
+  background: rgba(11,94,215,0.95);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.buttonDisabled {
+  background: rgba(11,94,215,0.55);
+  cursor: not-allowed;
+}
+
+.error {
+  margin-bottom: 10px;
+  color: crimson;
+}

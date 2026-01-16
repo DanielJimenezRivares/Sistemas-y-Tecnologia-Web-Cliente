@@ -1,0 +1,15 @@
+{
+  "1": {
+    "sum": 5,
+    "count": 1,
+    "reviews": [
+      {
+        "id": "1768550087465-fb41234f2f29c",
+        "rating": 5,
+        "review": "Fantástico",
+        "username": "Anónimo",
+        "timestamp": "2026-01-16T07:54:47.465Z"
+      }
+    ]
+  }
+}
