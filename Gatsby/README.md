@@ -1,6 +1,5 @@
-# Práctica Gatsby — Espacios Culturales (JAMSTACK)
+# Práctica Gatsby - Espacios Culturales (JAMSTACK)
 
-Máster en Ingeniería Informática — Sistemas y Tecnologías Web: Cliente  
 **Objetivo:** prototipo de sitio web estático con Gatsby (arquitectura **JAMSTACK**) para publicar **noticias** y **valoraciones** de espacios culturales, integrando datos desde una **API** en la capa de datos (GraphQL).
 
 ---
