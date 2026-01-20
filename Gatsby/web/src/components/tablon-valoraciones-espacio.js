@@ -76,7 +76,7 @@ export default function TablonValoracionesEspacio({ espacioId, title = "Valoraci
   }
 
   return (
-    <div style={{ display: "grid", gridTemplateRows: "minmax(0, 1fr) auto", minHeight: 0, gap: 10 }}>
+    <div style={{ display: "grid", gridTemplateRows: "minmax(125px, 1fr) auto", minHeight: 0, gap: 10 }}>
       <Tablon
         title={title}
         loading={state.loading}
