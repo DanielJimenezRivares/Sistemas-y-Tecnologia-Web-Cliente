@@ -10,6 +10,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/healthz", (req, res) => {
+  res.status(200).json({ ok: true, status: "up" });
+});
+
 app.use("/espacios", espaciosRouter);
 app.use("/valoraciones", valoracionesRouter);
 app.use("/noticias", noticiasRouter);
