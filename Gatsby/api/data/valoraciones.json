@@ -1,7 +1,7 @@
 {
   "1": {
-    "sum": 10,
-    "count": 2,
+    "sum": 15,
+    "count": 3,
     "reviews": [
       {
         "id": "1768550087465-fb41234f2f29c",
@@ -9,6 +9,13 @@
         "review": "Fantástico",
         "username": "Anónimo",
         "timestamp": "2026-01-16T07:54:47.465Z"
+      },
+      {
+        "id": "1768903635684-a41ac83790af08",
+        "rating": 5,
+        "review": "Genial",
+        "username": "Anónimo",
+        "timestamp": "2026-01-20T10:07:15.684Z"
       }
     ]
   }

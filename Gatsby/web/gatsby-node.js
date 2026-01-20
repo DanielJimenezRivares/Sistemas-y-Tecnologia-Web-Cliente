@@ -29,7 +29,6 @@ async function sourceEspacios({ actions, createNodeId, createContentDigest, repo
     if (data.length === 0) break;
 
     for (const espacio of data) {
-      // Tu API de /espacios devuelve { id, nombre, ... }
       const espacioIdReal = String(espacio.id ?? "").trim();
       const telefono =
         espacio.telefono == null
@@ -41,9 +40,8 @@ async function sourceEspacios({ actions, createNodeId, createContentDigest, repo
       createNode({
         ...espacio,
         telefono,
-        // guardamos el id real para queries / createPages
         espacio_cultural_id: espacioIdReal,
-        // id interno Gatsby (sobrescribe el id del API)
+        // id interno Gatsby
         id: nodeId,
         internal: {
           type: "EspacioCultural",
@@ -84,15 +82,14 @@ async function sourceNoticias({ actions, createNodeId, createContentDigest, repo
     if (data.length === 0) break;
 
     for (const noticia of data) {
-      const noticiaIdReal = String(noticia.id ?? "").trim();          // ej: n-3523-0
-      const espacioIdReal = String(noticia.espacio?.id ?? "").trim(); // id real del espacio
+      const noticiaIdReal = String(noticia.id ?? "").trim();
+      const espacioIdReal = String(noticia.espacio?.id ?? "").trim();
 
       const nodeId = createNodeId(`Noticia-${noticiaIdReal || JSON.stringify(noticia)}`);
 
       createNode({
         ...noticia,
         noticia_id: noticiaIdReal,
-        // clave para filtrar noticias por espacio en GraphQL
         espacio_cultural_id: espacioIdReal,
         // id interno Gatsby
         id: nodeId,
