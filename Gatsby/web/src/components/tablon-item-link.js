@@ -6,7 +6,7 @@ import * as styles from "./tablon-item.module.scss";
 export default function TablonItemLink({
   to,
   espacio,
-  fallbackEspacioId,    // string si no hay espacio
+  fallbackEspacioId,
   children,
 }) {
   const nombre = espacio?.nombre || (fallbackEspacioId ? `Espacio ${fallbackEspacioId}` : "Espacio (desconocido)");

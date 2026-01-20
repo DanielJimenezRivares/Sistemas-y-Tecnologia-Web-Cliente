@@ -18,7 +18,7 @@ export default function Layout({ title = "Espacios Culturales de Canarias", chil
         <div className={styles.footerImage}>
           <StaticImage
             src="../images/footer.png"
-            alt="Paisaje de Canarias"
+            alt="Icono de cultura"
             placeholder="blurred"
             layout="fixed"
             height={25}
