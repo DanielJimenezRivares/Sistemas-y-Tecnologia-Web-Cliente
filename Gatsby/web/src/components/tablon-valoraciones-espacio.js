@@ -63,12 +63,10 @@ export default function TablonValoracionesEspacio({ espacioId, title = "Valoraci
         throw new Error(`HTTP ${res.status}: ${txt}`);
       }
 
-      // refresca lista
       const controller = new AbortController();
       const data = await reload(controller.signal);
       setState({ loading: false, error: null, data });
 
-      // limpia form (rating lo dejo como está)
       setForm((f) => ({ ...f, username: "", review: "" }));
     } catch (err) {
       setPostError(String(err));
@@ -78,7 +76,7 @@ export default function TablonValoracionesEspacio({ espacioId, title = "Valoraci
   }
 
   return (
-    <div style={{ display: "grid", gridTemplateRows: "1fr auto", minHeight: 0, gap: 10 }}>
+    <div style={{ display: "grid", gridTemplateRows: "minmax(0, 1fr) auto", minHeight: 0, gap: 10 }}>
       <Tablon
         title={title}
         loading={state.loading}

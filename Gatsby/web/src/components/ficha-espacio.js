@@ -61,7 +61,7 @@ export default function FichaEspacio({ espacio }) {
 
         <div className={styles.k}>Web</div>
         <div className={styles.v}>
-          {espacio?.web && espacio.web !== "-" ? (
+          {espacio?.web && espacio.web !== "_U" ? (
             <a href={espacio.web} target="_blank" rel="noreferrer">{espacio.web}</a>
           ) : (
             "-"
