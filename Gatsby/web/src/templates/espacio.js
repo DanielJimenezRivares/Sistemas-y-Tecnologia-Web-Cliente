@@ -10,7 +10,7 @@ export default function EspacioPage({ data }) {
   const espacio = data.espacio;
 
   return (
-    <Layout title={espacio?.nombre || "Espacio"}>
+    <Layout title="Espacios Culturales de Canarias">
       <div className={styles.grid}>
         <div className={styles.left}>
           <FichaEspacio espacio={espacio} />
