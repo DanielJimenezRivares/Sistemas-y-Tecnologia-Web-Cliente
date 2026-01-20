@@ -8,7 +8,7 @@
   "scripts": {
     "start": "concurrently -n api,web -c auto \"npm run start -w api\" \"npm run start -w web\"",
     "dev": "concurrently -n api,web -c auto \"npm run dev -w api\" \"npm run develop -w web\"",
-    "build": "concurrently -n api,web -c auto --kill-others-on-fail \"npm run start -w api\" \"wait-on http://localhost:3000/healthz && npm run build -w web\"",
+    "build": "concurrently -n api,web -c auto --kill-others-on-fail --success first \"npm run start -w api\" \"wait-on http://localhost:3000/healthz && npm run build -w web\"",
     "serve": "concurrently -n api,web -c auto --kill-others-on-fail \"npm run start -w api\" \"npm run serve -w web\"",
     "lint": "npm run lint -w api && npm run lint -w web",
     "clean": "npm run clean -w api && npm run clean -w web"
